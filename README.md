@@ -5,4 +5,4 @@
 
 ### Copy all model/prototext files in folder called model_data in working directory.
 ### Copy other python files in working directory.
-### Make Folder calls Images. (I capital)
+##### Make Folder calls Images. (I capital) (NOT IMP)
