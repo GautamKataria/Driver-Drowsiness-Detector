@@ -3,6 +3,7 @@ import time
 import cv2
 import numpy as np
 from cv2 import dnn
+from tensorflow.python.keras.models import load_model
 
 DNN = "TF"
 if DNN == "CAFFE":
@@ -23,6 +24,7 @@ sec = start - end
 fps = 120 / sec
 print(abs(fps))
 
+model=load_model('model.h5')
 while True:
 
     ret,frame=cap.read()
@@ -48,6 +50,19 @@ while True:
         cord_y=y1+frameHeight
         cv2.rectangle(frame, (x1, y1), (x2, y2),  (0, 0, 255), 2)
         cv2.putText(frame, text, (x1, y1),cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
+        roi=frame
+        roi=cv2.resize(roi,(224,224))
+        roi = np.expand_dims(roi, axis=0)
+        print(roi.shape)
+        preds=model.predict(roi)
+        preds = np.argmax(preds)
+        print(preds)
+        if preds==0:
+            text = "drowsy"
+            cv2.putText(frame, text, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
+        elif preds==1:
+            text= "focused"
+            cv2.putText(frame, text, (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
 
     #cv2.imwrite(img_item, roi_gray)
     cv2.imshow("Video", frame)
