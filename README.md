@@ -1,17 +1,19 @@
-# Multiclass-Driver-Drowsiness-Detector
-#### Collaborators: Adarsh Saraf, Gautam Kataria
+# Eye-Based-Driver-Drowsiness-Detector
+
 ## This Repository hosts the code and files required to perform driver drowsiness detector with the help of cnn classification.
 
+## To Run:
 
-### Copy all model/prototext files in folder called model_data in working directory.
-### Copy other python files in working directory.
-##### Make Folder calls Images. (I capital) (NOT IMP)
-
-
-## Method to make dataset:
-### Run labrat.py to extract pictures (full franes) from video cam.
-### Run face_extractor.py to extract faces from those images using DNN and grayscale + hist equ will be done automatically.
-### Faces woud be saved in a folder named 'faces'.
-### Make a folder for each class ('Focused', 'Drowsy').
-
+### Copy other python file in working directory.
+### copy weights file in working directory.
 ### link to weights: [Here](https://drive.google.com/file/d/1Lr8WcUxcZ4cYR6B932vZX0zCZNmKNot2/view?usp=sharing)
+
+### Theoretical working:
+Step1: The program activated the camera and starts the process of capturing frames.
+
+Step2: We change the coloured image to grayscale to make the detection more accurate and reliable. The program then detects the drivers’ eyes using an eye based haarcascade (haarcascade_lefteye_2splits.xml) which is then shown to the user as a bounding box around the eyes.
+
+Step3: Further we crop out this detected region of interest (ROI), which would be a cut-out of the eye region which is also shown in a separate window to the user.
+
+Step4: Then our trained model takes in the grayscale eye ROI image as input and classifies it into focused or drowsy (eyes opened or closed). 
+After detection and classification, we can perform any action desired. In this case we are just adding the classified class on the user window.
