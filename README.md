@@ -6,7 +6,7 @@
 
 ### Copy python file in working directory.
 ### Copy weights file in working directory.
-### Run the eye_driver_detection.py file.
+### Run the eye_driver_detect.py file.
 ### link to weights: [Here](https://drive.google.com/file/d/1Lr8WcUxcZ4cYR6B932vZX0zCZNmKNot2/view?usp=sharing)
 
 ### Theoretical working:
