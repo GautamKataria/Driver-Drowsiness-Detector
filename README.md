@@ -14,4 +14,4 @@
 ### Faces woud be saved in a folder named 'faces'.
 ### Make a folder for each class ('Focused', 'Drowsy').
 
-### link to weights: [https://drive.google.com/file/d/1Lr8WcUxcZ4cYR6B932vZX0zCZNmKNot2/view?usp=sharing]
+### link to weights: [Here](https://drive.google.com/file/d/1Lr8WcUxcZ4cYR6B932vZX0zCZNmKNot2/view?usp=sharing)
