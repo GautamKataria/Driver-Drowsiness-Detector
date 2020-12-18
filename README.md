@@ -4,7 +4,7 @@
 
 ## To Run:
 
-### Copy other python file in working directory.
+### Copy python file in working directory.
 ### copy weights file in working directory.
 ### link to weights: [Here](https://drive.google.com/file/d/1Lr8WcUxcZ4cYR6B932vZX0zCZNmKNot2/view?usp=sharing)
 
