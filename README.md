@@ -2,9 +2,9 @@
 
 ## This Repository hosts the code and files required to perform driver drowsiness detector with the help of cnn classification.
 
-## To Run:
+## To Run (eye based model):
 
-### Copy python file in working directory.
+### Copy eye_driver_detect.py python file in working directory.
 ### Copy weights file in working directory.
 ### Run the eye_driver_detect.py file.
 ### link to weights for eye based model: [Here](https://drive.google.com/file/d/1Lr8WcUxcZ4cYR6B932vZX0zCZNmKNot2/view?usp=sharing)
